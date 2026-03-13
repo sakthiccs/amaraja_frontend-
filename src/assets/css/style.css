@@ -1,0 +1,160 @@
+* {
+    font-family: "Roboto", sans-serif !important;
+}
+
+.btn, button {
+    font-family: "Open Sans", serif;
+}
+
+.fs-6 {
+    font-size: 6px;
+}
+
+.fs-8 {
+    font-size: 8px;
+}
+
+.fs-10 {
+    font-size: 10px;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+.h-43px {
+    height: 43px !important;
+}
+.text-gray {
+    color: #5A5A5A;
+}
+
+.text-red {
+    color: #E80004;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.page-body-wrapper {
+    min-height: calc(100vh - 100px);
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 100px;
+}
+
+.main-panel {
+    transition: width 0.25s ease, margin 0.25s ease;
+    width: calc(100% - 220px);
+    min-height: calc(100vh - 60px);
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    margin-left: 220px;
+    background-color: #F2F2F2;
+}
+
+.content-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+    width: 100%;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:focus-visible {
+    background-color: #00295C;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 0px auto;
+    border: 0px;
+    box-shadow: unset;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.title-1 {
+    font-weight: 600;
+    font-size: 28px;
+    color: #303030;
+}
+
+.title-2 {
+    font-weight: 600;
+    font-size: 24px;
+    color: #303030;
+}
+
+
+
+
+.sidebar .nav .nav-item.active .nav-item a.nav-link {
+    color: #838383;
+}
+
+li.nav-item.active li.nav-item svg path {
+    fill: #838383;
+}
+
+.sidebar .nav .nav-item.active li.nav-item.active a.nav-link {
+    color: #00295c !important;
+}
+
+li.nav-item.active li.nav-item.active svg path {
+    fill: #00295c;
+}
+
+.nav-link i.bi {
+    display: block;
+    font-weight: 600;
+    color: #00295c;
+}
+
+.main-menu ul li {
+    margin-left: 20px;
+}
+
+.page-body-wrapper {
+  padding-top: 100px !important;
+}
+
+
+.login-logo {
+    height: 68px;
+    margin-bottom: 60px !important;
+}
+
+.data-card div div div span {
+    font-size: 12px !important;
+}
+.data-card div div:last-child span {
+    font-size: 12px;
+    color: #ffffff;
+}
+.data-card div h3 {
+    font-size: 12px;
+    color: #ffffff !important;
+    font-weight: 500 !important;
+}

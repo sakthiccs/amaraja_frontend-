@@ -1,0 +1,73 @@
+/* ✅ Humbelberg Style Mobile Sidebar & Overlay */
+@media (max-width: 991px) {
+
+  /* Sidebar Hidden Default */
+  #sidebar.sidebar-offcanvas {
+    transform: translateX(-100%);
+    width: 240px !important;
+    position: fixed;
+    left: 0;
+    top: 90px;
+    height: calc(100vh - 90px);
+    background: #06121a !important;
+    z-index: 10000 !important;
+    transition: 0.3s ease-in-out;
+    border-right: 1px solid #0e2c3f;
+  }
+
+  /* Sidebar Show */
+  #sidebar.sidebar-offcanvas.active {
+    transform: translateX(0);
+  }
+
+  /* Dark Screen Overlay */
+  .mobile-overlay {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 90px);
+    background: rgba(0,0,0,0.65);
+    z-index: 9999;
+    display: none;
+  }
+
+  .mobile-overlay.show {
+    display: block;
+  }
+
+  /* Prevent Scroll When Menu Open */
+  body.sidebar-open {
+    overflow: hidden;
+  }
+
+  /* Websocket Badge Fix */
+  .connection-status {
+    top: 120px !important;
+    right: 12px;
+    z-index: 900 !important;
+  }
+
+  /* Top black strip */
+  .navbar,
+  .navbar-menu-wrapper,
+  .navbar-brand-wrapper {
+    background: #06121a !important;
+  }
+
+  .main-panel {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .content-wrapper {
+    padding-top: 120px !important;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+

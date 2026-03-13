@@ -1,0 +1,40 @@
+.navbar-brand img {
+    height: 60px !important;
+    width: auto;
+}@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+
+@media (max-width: 991px) {
+  #sidebar.sidebar-offcanvas {
+    transform: translateX(-100%);
+    width: 240px !important;
+    position: fixed;
+    left: 0;
+    top: 90px;
+    height: calc(100vh - 90px);
+    background: #06121a !important;
+    transition: 0.3s ease-in-out;
+  }
+
+  #sidebar.sidebar-offcanvas.active {
+    transform: translateX(0);
+  }
+
+  .mobile-overlay {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 90px);
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 9999;
+    display: none;
+  }
+
+  .mobile-overlay.show {
+    display: block;
+  }
+}

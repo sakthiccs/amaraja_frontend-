@@ -1,0 +1,315 @@
+/* ============================================
+// STYLES.CSS - All Styles
+// ============================================
+const styles = `
+/* Base Layout Styles */
+.ems-container {
+  min-height: 100vh;
+  background: #000000;
+  color: white;
+  display: flex;
+}
+
+/* Sidebar Styles */
+.ems-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #18181b;
+  border-right: 1px solid #27272a;
+  transition: all 0.3s;
+  z-index: 50;
+}
+
+.ems-sidebar.expanded {
+  width: 16rem;
+}
+
+.ems-sidebar.collapsed {
+  width: 5rem;
+}
+
+.ems-logo-section {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid #27272a;
+}
+
+.ems-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ems-logo-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #dc2626;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ems-nav {
+  padding: 1rem;
+}
+
+.ems-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ems-nav-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  border: none;
+  background: transparent;
+  color: #a1a1aa;
+  cursor: pointer;
+}
+
+.ems-nav-item:hover {
+  background: #27272a;
+  color: white;
+}
+
+.ems-nav-item.active {
+  background: #dc2626;
+  color: white;
+}
+
+/* Main Content Styles */
+.ems-main {
+  flex: 1;
+  transition: all 0.3s;
+}
+
+.ems-main.sidebar-expanded {
+  margin-left: 16rem;
+}
+
+.ems-main.sidebar-collapsed {
+  margin-left: 5rem;
+}
+
+.ems-header {
+  height: 5rem;
+  background: #18181b;
+  border-bottom: 1px solid #27272a;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ems-time-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #27272a;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.ems-content {
+  padding: 2rem;
+}
+
+/* Card Styles */
+.ems-card {
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.ems-card:hover {
+  border-color: #dc2626;
+}
+
+.ems-card-header {
+  background: #dc2626;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ems-card-body {
+  padding: 1.5rem;
+}
+
+/* Metric Card Styles */
+.ems-metric-card {
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+
+.ems-metric-card:hover {
+  transform: scale(1.05);
+  border-color: #dc2626;
+}
+
+.ems-metric-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.ems-metric-icon {
+  width: 3rem;
+  height: 3rem;
+  background: #27272a;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ems-live-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: #27272a;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.ems-live-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #dc2626;
+  border-radius: 9999px;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.ems-progress-bar {
+  width: 100%;
+  height: 0.5rem;
+  background: #27272a;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.ems-progress-fill {
+  height: 100%;
+  background: #dc2626;
+  border-radius: 9999px;
+  transition: width 0.5s;
+}
+
+/* Button Styles */
+.ems-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.ems-button-primary {
+  background: #dc2626;
+  color: white;
+}
+
+.ems-button-primary:hover {
+  background: #b91c1c;
+}
+
+.ems-button-secondary {
+  background: #27272a;
+  color: #a1a1aa;
+  border: 1px solid #27272a;
+}
+
+.ems-button-secondary:hover {
+  background: #18181b;
+  color: white;
+}
+
+/* Grid Layouts */
+.ems-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.ems-grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.ems-grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.ems-grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1280px) {
+  .ems-grid-cols-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .ems-grid-cols-3,
+  .ems-grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ems-grid-cols-2,
+  .ems-grid-cols-3,
+  .ems-grid-cols-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Form Elements */
+.ems-select {
+  background: #18181b;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #27272a;
+  font-weight: 500;
+}
+
+.ems-select:focus {
+  outline: none;
+  border-color: #dc2626;
+}
+
+.ems-checkbox {
+  width: 1rem;
+  height: 1rem;
+  accent-color: #dc2626;
+  border-radius: 0.25rem;
+}
